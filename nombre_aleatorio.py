@@ -35,7 +35,7 @@ print("=" * 65)
 print("        ESTUDIANTES DE PROGRAMACIÓN ESTRUCTURADA")
 print("=" * 65)
 
-# Recorrer y mostrar la lista utilizando un ciclo for
+# Recorrer y mostrar la lista
 for numero, estudiante in enumerate(estudiantes, start=1):
     print(f"{numero:2}. {estudiante}")
 
