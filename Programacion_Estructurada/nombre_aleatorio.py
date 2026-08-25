@@ -1,6 +1,5 @@
 import random
 
-
 # Lista de estudiantes de Programación Estructurada
 estudiantes = [
     "GRETCHEN ZURIEL ABURTO CAMPOS",
