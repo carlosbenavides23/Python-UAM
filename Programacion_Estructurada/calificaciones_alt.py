@@ -1,3 +1,6 @@
+import time
+
+
 while True:
     print("=" * 50)
     print("         PROCESAMIENTO DE CALIFICACIONES")
@@ -16,18 +19,17 @@ while True:
         except ValueError:
             print("Ingrese un número entero válido.")
 
+    suma_notas = 0
+    aprobados = 0
+    reprobados = 0
 
-# Acumulador para sumar todas las calificaciones
-suma_notas = 0
-
-# Contadores para registrar aprobados y reprobados
-aprobados = 0
-reprobados = 0
+    # Inicio de la medicion del tiempo CPU
+    inicio_cpu = time.process_time()
 
     # Se usa for porque conocemos la cantidad exacta
-    # de estudiantes a procesar
+    # de estudiantes que se deben procesar
     for estudiante in range(1, cantidad + 1):
-        # Validar la calificacion
+        # Validar cada calificacion
         while True:
             try:
                 nota = float(input(f"\nCalificación del estudiante {estudiante}: "))
@@ -49,11 +51,13 @@ reprobados = 0
         else:
             reprobados += 1
 
+    # Fin de la medición del tiempo CPU
+    fin_cpu = time.process_time()
+    tiempo_cpu = fin_cpu - inicio_cpu
 
-# Calculo del promedio general
-promedio = suma_notas / cantidad
+    promedio = suma_notas / cantidad
 
-    # Mostrar informe
+    # Informe final.
     print("\n" + "=" * 50)
     print("                INFORME DEL GRUPO")
     print("=" * 50)
@@ -62,10 +66,10 @@ promedio = suma_notas / cantidad
     print(f"Promedio del grupo       : {promedio:.2f}")
     print(f"Aprobados                : {aprobados}")
     print(f"Reprobados               : {reprobados}")
+    print(f"Tiempo CPU utilizado     : {tiempo_cpu:.6f} segundos")
 
     print("=" * 50)
 
-    # Preguntar si se desea procesar otro grupo
     while True:
         repetir = input("\n¿Desea procesar otro grupo? (s/n): ").lower()
 
