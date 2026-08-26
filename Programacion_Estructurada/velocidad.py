@@ -13,6 +13,7 @@ def generar_con_while(cantidad):
         suma += numero
         contador += 1
 
+    # Calcular el promedio y el tiempo
     fin = time.perf_counter_ns()
 
     promedio = suma / cantidad

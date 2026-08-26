@@ -18,10 +18,8 @@ while True:
         print("Ingrese un número entero válido.")
 
 
-# Acumulador para sumar todas las calificaciones
 suma_notas = 0
 
-# Contadores para registrar aprobados y reprobados
 aprobados = 0
 reprobados = 0
 
@@ -54,7 +52,6 @@ for estudiante in range(1, cantidad + 1):
         reprobados += 1
 
 
-# Calculo del promedio general
 promedio = suma_notas / cantidad
 
 
