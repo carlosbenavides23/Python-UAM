@@ -16,18 +16,17 @@ while True:
         except ValueError:
             print("Ingrese un número entero válido.")
 
+    # Acumulador para sumar todas las calificaciones
+    suma_notas = 0
 
-# Acumulador para sumar todas las calificaciones
-suma_notas = 0
-
-# Contadores para registrar aprobados y reprobados
-aprobados = 0
-reprobados = 0
+    # Contadores para registrar aprobados y reprobados
+    aprobados = 0
+    reprobados = 0
 
     # Se usa for porque conocemos la cantidad exacta
     # de estudiantes a procesar
     for estudiante in range(1, cantidad + 1):
-        # Validar la calificacion
+        # Validar la calificación
         while True:
             try:
                 nota = float(input(f"\nCalificación del estudiante {estudiante}: "))
@@ -49,9 +48,8 @@ reprobados = 0
         else:
             reprobados += 1
 
-
-# Calculo del promedio general
-promedio = suma_notas / cantidad
+    # Cálculo del promedio general
+    promedio = suma_notas / cantidad
 
     # Mostrar informe
     print("\n" + "=" * 50)

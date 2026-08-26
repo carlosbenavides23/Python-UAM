@@ -17,7 +17,9 @@ def generar_con_while(cantidad):
     fin = time.process_time_ns()
 
     promedio = suma / cantidad
-    tiempo = fin - inicio
+
+    # Convertir nanosegundos a milisegundos
+    tiempo = (fin - inicio) / 1_000_000
 
     return promedio, tiempo
 
@@ -35,7 +37,9 @@ def generar_con_for(cantidad):
     fin = time.process_time_ns()
 
     promedio = suma / cantidad
-    tiempo = fin - inicio
+
+    # Convertir nanosegundos a milisegundos
+    tiempo = (fin - inicio) / 1_000_000
 
     return promedio, tiempo
 
@@ -51,7 +55,7 @@ while True:
     opcion = input("\nSeleccione una opción: ")
 
     if opcion == "1":
-        cantidad = random.randint(100, 1000)
+        cantidad = random.randint(100_000, 1_000_000)
         print(f"\nCantidad generada automáticamente: {cantidad}")
 
     elif opcion == "2":
@@ -85,12 +89,12 @@ while True:
     print("\n[ WHILE ]")
     print(f"Cantidad : {cantidad}")
     print(f"Promedio : {promedio_while:.2f}")
-    print(f"Tiempo   : {tiempo_while:,} ns")
+    print(f"Tiempo   : {tiempo_while:.3f} ms")
 
     print("\n[ FOR ]")
     print(f"Cantidad : {cantidad}")
     print(f"Promedio : {promedio_for:.2f}")
-    print(f"Tiempo   : {tiempo_for:,} ns")
+    print(f"Tiempo   : {tiempo_for:.3f} ms")
 
     print("\n" + "=" * 48)
 
