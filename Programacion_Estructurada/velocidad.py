@@ -2,6 +2,7 @@ import random
 import time
 
 
+# Para generar numeros aleatorios con while
 def generar_con_while(cantidad):
     suma = 0
     contador = 0
@@ -21,6 +22,7 @@ def generar_con_while(cantidad):
     return promedio, tiempo
 
 
+# Para generar numeros aleatorios con for
 def generar_con_for(cantidad):
     suma = 0
 
