@@ -6,14 +6,14 @@ def generar_con_while(cantidad):
     suma = 0
     contador = 0
 
-    inicio = time.perf_counter_ns()
+    inicio = time.process_time_ns()
 
     while contador < cantidad:
         numero = random.randint(0, 100)
         suma += numero
         contador += 1
 
-    fin = time.perf_counter_ns()
+    fin = time.process_time_ns()
 
     promedio = suma / cantidad
     tiempo = fin - inicio
@@ -24,13 +24,13 @@ def generar_con_while(cantidad):
 def generar_con_for(cantidad):
     suma = 0
 
-    inicio = time.perf_counter_ns()
+    inicio = time.process_time_ns()
 
     for _ in range(cantidad):
         numero = random.randint(0, 100)
         suma += numero
 
-    fin = time.perf_counter_ns()
+    fin = time.process_time_ns()
 
     promedio = suma / cantidad
     tiempo = fin - inicio
