@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# VS Code (opcional: solo si no querés compartir configuración)
+.vscode/
