@@ -1,10 +1,4 @@
 # ============================================================
-# GUIA PRACTICA - SENTENCIAS DE CONTROL
-# Programa con menu, funciones y validaciones
-# ============================================================
-
-
-# ============================================================
 # FUNCIONES DE VALIDACION
 # ============================================================
 
@@ -590,7 +584,7 @@ def menu_while():
 def menu_principal():
     while True:
         print("\n" + "=" * 60)
-        print("         GUIA PRACTICA - SENTENCIAS DE CONTROL")
+        print("              PRACTICA - SENTENCIAS DE CONTROL")
         print("=" * 60)
         print("1. Ejercicios con if")
         print("2. Ejercicios con if anidados")
