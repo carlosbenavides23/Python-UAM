@@ -174,7 +174,7 @@ def main():
     posicion = consultar_posicion(ventas)
     if posicion is not None:
         f, c = posicion
-        # El subtotal depende de la cantidad: siempre se recalcula.
+        # El subtotal depende de la cantidad: siempre se recalcula
         while True:
             cantidad = leer_entero("Nueva cantidad de la venta consultada: ", 1)
             try:
